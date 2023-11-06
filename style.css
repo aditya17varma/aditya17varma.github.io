@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    font-size: 14px;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-color: #370202;
+    color: #fff;
+    background-image: url('assets/desert_night.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+}
+
+header #particles{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+header .info-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    height: 100vh;
+}
+
+header .info-text h1{
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+}
+
+header .info-text h3{
+    font-size: 1.5rem;
+}
+
+header .info-text .scroll{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    color: #fff;
+    transform: translate(0, -50%);
+    transition: all 0.5s;
+    text-align: center;
+}
+
+header .info-text .scroll:hover{
+    opacity: 0.7;
+}
+
+header .info-text .scroll::before{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    content: '';
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100%{
+        opacity: 0;
+    }
+    15%, 45%{
+        opacity: 1;
+    }
+    60%{
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0.5);
+        opacity: 0;
+    }
+}
+
+#about{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    /*background-image: url('assets/Parchment2.jpg');*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+#about, #projects{
+    background-color: #290606;
+    padding: 40px;
+}
+
+#about .header, #projects .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#about .header h1, #projects .header h1{
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+#about .header a, #projects .header a{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #ffffff;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: #3F0B0B;
+}
+
+#about .header a:hover, #projects .header a:hover{
+    border-color: #ffffff;
+    box-shadow: none;
+}
+
+#about .header button{
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #ffffff;
+    border: 1px solid transparent;
+    padding: 10px 50px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background-color: #3F0B0B;
+
+}
+
+#about .header button:hover{
+    border-color: #ffffff;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#about .card, #projects .card ,#projects .heading-card, #projects .category-card{
+    padding: 30px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    background-color: #3F0B0B;
+}
+
+#about .card:hover, #projects .card:hover, #projects .heading-card:hover{
+    border-color: #ffffff;
+    box-shadow: none;
+}
+
+#about .card img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+#about .card .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#about .card .info h1, #projects .card .info h1{
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+}
+
+#about .card .info p, #projects .card .info p{
+    color: #ffffff;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#about .card .info i {
+    font-size: 48px;
+}
+
+#about .card .info i:hover{
+    color: orange;
+}
+
+#about .modal{
+    padding: 30px;
+    margin: 20px;
+
+    background-color: #3F0B0B;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#about .modal  p, a{
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+
+#about .modal a:hover{
+    color: orange;
+}
+
+#about #modal-root {
+    position: fixed;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.4);
+    left : 0;
+    top: 0;
+    width: 0px;
+    height : 0px;
+    opacity: 0;
+    transition: opacity 0.15s ease-out, width 0s linear 0.15s, height 0s linear 0.15s;
+}
+
+#about #modal-root.visible {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.15s ease-out;
+}
+
+#about .modal .close{
+    color: #fff;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#about .modal .close:hover, .close:focus{
+    color: orange;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#projects{
+    /*background-image: url('assets/Parchment2.jpg');*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#projects .project-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    /*background-color: orange;*/
+}
+
+#projects .project-cards .heading-card{
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+
+#projects .project-cards .category-card{
+    display: flex;
+    background-color: rgba(235, 119, 18, 0.05);
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#projects .project-cards .card-row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#projects .project-cards .category-card .card-title{
+    border: #fff;
+    border-bottom: solid;
+    color: #fff;
+}
+
+
+#projects .project-cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
+}
+
+#projects .project-cards .card .info i{
+    color: #fff;
+    font-size: 8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+#projects .project-cards .card .info .project-icon{
+    color: #ffffff;
+    font-size: 8rem;
+    width: 128px;
+    height: 128px;
+    text-align: center;
+    margin-bottom: 1.4rem;
+    align-self: center;
+}
+
+#projects .project-cards .card .info h1{
+    text-align: center;
+    color: #ffffff;
+}
+
+#projects .project-cards .card .info p{
+    font-size: 1.1rem;
+}
+
+#projects .category-card h1{
+    text-align: center;
+}
+
+.scroll-top{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #370202;
+    color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 16px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+.scroll-top:hover{
+    border-color: #fff;
+    box-shadow: none;
+}
+
+@media screen and (max-width: 720px) {
+    header .info-text h1{
+        font-size: 4rem;
+    }
+
+    header .info-text h3{
+        font-size: 1.1rem;
+    }
+
+    #about .card{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about .card img{
+        max-width: 150px;
+        max-height: 150px;
+    }
+
+}

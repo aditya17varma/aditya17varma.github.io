@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-wiodth, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div id="particles"></div>
+        <div class="info-text">
+            <h1>Adi Kunatharaju</h1>
+            <h3>Welcome to my webpage</h3>
+            <a href="#about" class="scroll">
+                <i class="bx bxs-down-arrow"></i>
+            </a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="header">
+            <h1>About Me</h1>
+<!--            <a onclick=displayModal()>Contact Me</a>-->
+            <button id="contactButton">Contact Me</button>
+        </div>
+
+        <div id="modal-root">
+            <div id="contactModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick=closeModal()>&times</span>
+                    <h1>Contact Details</h1>
+                    <p>
+                        Phone: 415-999-0174 </br>
+                        Email: <a href="mailto: aditya17varma@gmail.com">aditya17varma@gmail.com</a> </br>
+                        LinkedIn: <a href="https://www.linkedin.com/in/adityakunatharaju/" target="_blank">https://www.linkedin.com/in/adityakunatharaju/</a> </br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <img src="assets/Adi_Kunatharaju_Logo.png">
+            <div class="info">
+                <h1>It's Adi</h1>
+                <p>
+                    I am a highly skilled and motivated software developer located in San Francisco, CA.
+                    I am currently pursuing a Master's degree in Computer Science at the University of San Francisco,
+                    with an GPA of 3.8/4.0.
+                    </br> My educational journey has been diverse,
+                    including a Bachelor of Laws from Jindal Global University and a Bachelor of Arts in History from the University of California, Los Angeles.
+                    Prior work experiene includes working as a corporate lawyer in New Delhi, India, and as a paralegal in Los Angeles, CA.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="info">
+                <h1>Tech Stack</h1>
+                <p>
+                    <i class='bx bxl-python'></i>
+                    <i class='bx bxl-java'></i>
+                    <i class="devicon-c-plain"></i>
+                    <i class='bx bxl-c-plus-plus' ></i>
+                    <i class='bx bxl-go-lang' ></i>
+                    <i class='bx bxl-javascript'></i>
+                    <i class='bx bxl-typescript'></i>
+                </p>
+                <p>
+                    <i class='bx bxl-nodejs' ></i>
+                    <i class='bx bxl-angular'></i>
+                    <i class='bx bxl-docker' ></i>
+                    <i class='bx bxl-aws' ></i>
+                    <i class='bx bxl-mongodb'></i>
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="projects">
+        <div class="header">
+            <h1>Projects</h1>
+            <a href="#">See More</a>
+        </div>
+        <div class="project-cards">
+            <div class="heading-card">
+                <div class="info">
+                    <p>
+                        Explore some of my projects! </br>
+                        Areas covered include Machine Learning, Networks, and Full Stack Development,
+                        and Cloud Computing. </br>
+                        They showcase the range of my skills, my ability to learn new technologies,
+                        and my passion for programming.
+                        </br></br>
+
+                        <b>This website has been built from scratch, using HTML, CSS, and JavaScript.</b>
+                    </p>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-title">
+                    <h1>Machine Learning</h1>
+                </div>
+                <div class="card-row">
+                    <div class="card">
+                        <div class="info">
+<!--                            <i class='bx bxs-devices'></i>-->
+                            <img src="assets/golf_icon.png" alt="Golf Icon" class="project-icon">
+                            <h1>Golf CV</h1>
+                            <p>
+                                Add info
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <i class='bx bxs-network-chart'></i>
+                            <h1>Federated Machine Learning</h1>
+                            <p>
+                                Add info
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+<!--                            <i class='bx bxs-component'></i>-->
+                            <img class="project-icon" src="https://img.icons8.com/external-outline-black-m-oki-orlando/64/FFFFFF/external-data-pipeline-data-science-outline-outline-black-m-oki-orlando.png" alt="external-data-pipeline-data-science-outline-outline-black-m-oki-orlando"/>
+                            <h1>Auto Integrate</h1>
+                            <p>
+                                Add info
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-title">
+                    <h1>Networks</h1>
+                </div>
+                <div class="card-row">
+                    <div class="card">
+                        <div class="info">
+                            <i class='bx bx-network-chart' ></i>
+                            <h1>Network Simulator</h1>
+                            <p>
+                                Add info
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <i class='bx bx-collapse-horizontal' ></i>
+                            <h1>Network Compression Detection</h1>
+                            <p>
+                                Add info
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="category-card">
+                <div class="card-title">
+                    <h1>Cloud Computing</h1>
+                </div>
+                <div class="card-row">
+                    <div class="card">
+                        <div class="info">
+                            <i class='bx bx-cloud-upload' ></i>
+                            <h1>Auto Cloud Deployer</h1>
+                            <p>
+                                Add info
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="category-card">
+                <div class="card-title">
+                    <h1>Full Stack</h1>
+                </div>
+                <div class="card-row">
+                    <div class="card">
+                        <div class="info">
+                            <i class='bx bx-hotel' ></i>
+                            <h1>Hotels.com Clone</h1>
+                            <p>
+                                Add info
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <button class="scroll-top" onclick="scrollToTop()">
+        <i class="bx bxs-up-arrow"></i>
+    </button>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
