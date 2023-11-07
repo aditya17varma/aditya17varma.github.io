@@ -45,16 +45,27 @@
 
 
         <div class="card">
-            <img src="assets/Adi_Kunatharaju_Logo.png">
+            <div id="aboutImages" style="text-align: center">
+                <img src="assets/Adi.jpeg" alt="Adi" style="padding: 10px">
+                <img src="assets/AdiMarathon.jpeg" alt="AdiMarathon" style="padding: 10px">
+            </div>
             <div class="info">
                 <h1>It's Adi</h1>
                 <p>
-                    I am a highly skilled and motivated software developer located in San Francisco, CA.
+                    I am a highly skilled and motivated software developer located in San Francisco, CA. I am passionate about building scalable and efficient software solutions, that can be used to solve real world problems.
                     I am currently pursuing a Master's degree in Computer Science at the University of San Francisco,
                     with an GPA of 3.8/4.0.
-                    </br> My educational journey has been diverse,
-                    including a Bachelor of Laws from Jindal Global University and a Bachelor of Arts in History from the University of California, Los Angeles.
+                    </br> </br>
+                    My educational journey has been diverse, including a Bachelor of Laws from Jindal Global University,
+                    and a Bachelor of Arts in History from the University of California, Los Angeles.
                     Prior work experiene includes working as a corporate lawyer in New Delhi, India, and as a paralegal in Los Angeles, CA.
+                    </br> </br>
+                    Relevant coursework includes: Machine Learning, Intro to AI, Algorithms, Full-Stack Development, Network Programming, Modern Parallel Programming, and Human-Computer Interaction.
+                    </br> </br>
+                    My diverse educational and work experience has given me a unique perspective on problem solving, and the ability to think outside the box.
+                    It has also made me a strong communicator, and team player. I'm a strong self-learner, always seeking to enhance my knowledge and skillset.
+                    </br> </br>
+                    Outside the classroom, I am an avid athlete, and enjoy playing golf and running. I recently completed my first marathon!
                 </p>
             </div>
         </div>
@@ -70,13 +81,25 @@
                     <i class='bx bxl-go-lang' ></i>
                     <i class='bx bxl-javascript'></i>
                     <i class='bx bxl-typescript'></i>
+                    <i class="devicon-css3-plain"></i>
+                    <i class="devicon-html5-plain"></i>
+                    <i class="devicon-linux-plain"></i>
+                    <i class="devicon-r-original"></i>
                 </p>
                 <p>
                     <i class='bx bxl-nodejs' ></i>
                     <i class='bx bxl-angular'></i>
+                    <i class="devicon-react-original"></i>
                     <i class='bx bxl-docker' ></i>
                     <i class='bx bxl-aws' ></i>
                     <i class='bx bxl-mongodb'></i>
+                    <i class="devicon-mysql-plain"></i>
+                    <i class="devicon-azure-plain"></i>
+                    <i class="devicon-figma-plain"></i>
+                    <i class="devicon-github-original"></i>
+                    <i class="devicon-jupyter-plain-wordmark"></i>
+                    <i class="devicon-latex-original"></i>
+                    <i class="devicon-opencv-plain-wordmark"></i>
                 </p>
             </div>
         </div>
@@ -86,14 +109,14 @@
     <section id="projects">
         <div class="header">
             <h1>Projects</h1>
-            <a href="#">See More</a>
+            <a href="https://github.com/aditya17varma" target="_blank">GitHub</a>
         </div>
         <div class="project-cards">
             <div class="heading-card">
                 <div class="info">
                     <p>
                         Explore some of my projects! </br>
-                        Areas covered include Machine Learning, Networks, and Full Stack Development,
+                        Areas covered include Machine Learning, Full-Stack Development, Network Programming,
                         and Cloud Computing. </br>
                         They showcase the range of my skills, my ability to learn new technologies,
                         and my passion for programming.
@@ -106,35 +129,65 @@
 
             <div class="category-card">
                 <div class="card-title">
-                    <h1>Machine Learning</h1>
+                    <h1>MACHINE LEARNING</h1>
                 </div>
                 <div class="card-row">
                     <div class="card">
+
                         <div class="info">
 <!--                            <i class='bx bxs-devices'></i>-->
                             <img src="assets/golf_icon.png" alt="Golf Icon" class="project-icon">
                             <h1>Golf CV</h1>
                             <p>
-                                Add info
+                                A project that combines my passions of sports and tech! </br>
+                                I used a <span style="color:orange">CNN</span> to detect the 8 key positions of a golf swing (Address, top of backswing, impact, finish, etc.). </br>
+                                I then leveraged Google's <span style="color: orange">Mediapipe</span> library and <span style="color: orange">OpenCV</span> to detect pose landmarks.
+                                These pose-landmarks were used to compare golf-swings using a custom <span style="color:orange">KNN</span> algorithm to provide and present classification to the user.
+
                             </p>
                         </div>
+                        <a class="projectButton" target="_blank" href="https://github.com/aditya17varma/GolfSwingAnalyzer">See More</a>
                     </div>
                     <div class="card">
                         <div class="info">
                             <i class='bx bxs-network-chart'></i>
                             <h1>Federated Machine Learning</h1>
                             <p>
-                                Add info
+                                This is a <span style="color:orange">Federated</span> Machine Learning system that uses a <span style="color: orange">Central Coordinator</span> and has learner nodes which are Mutex/Blocking.
+                                The <span style="color: orange">learner nodes</span> will train the model one after one another, with the Central Coordinator broadcasting the most up-to-date model back to the learner nodes for the next iteration.
+                                On the MNIST dataset, we are getting <span style="color: orange">accuracy</span> that is within 3% of a consolidated model.
                             </p>
                         </div>
+                        <button id="MLButton" class="projectButton">See More</button>
+                        <div id="MLModal-root">
+                            <div id="MLModal" class="modal">
+                                <div class="modal-content">
+                                    <div class="info">
+                                        <h1>Federated Machine Learning</h1>
+                                        <img src="assets/Fed_ml.png" alt="Project summary image" width=70% height=80%>
+                                        <p>
+                                            The code for this project cannot be shared due to proprietary reasons. </br>
+                                            However, I can share an overview of the project structure. </br>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="card">
                         <div class="info">
-<!--                            <i class='bx bxs-component'></i>-->
                             <img class="project-icon" src="https://img.icons8.com/external-outline-black-m-oki-orlando/64/FFFFFF/external-data-pipeline-data-science-outline-outline-black-m-oki-orlando.png" alt="external-data-pipeline-data-science-outline-outline-black-m-oki-orlando"/>
                             <h1>Auto Integrate</h1>
                             <p>
-                                Add info
+                                <span style="font-size: small">Sponsored by <a href="https://www.objectedge.com" target="_blank">ObjectEdge</a></span></br>
+
+                                Build a tool to auto-integrate data from multiple applications by using the Large Language Models <span style="color:orange">(LLM)</span> from OpenAI, Microsoft, and Meta.</br>
+                                We researched the accuracy of ChatGPT-3.5, <span style="color:orange">ChatGPT-4</span>, Llama-2 and multi-agent tools such as AutoGen for <span style="color: orange">fine-tuning</span> the responses. </br>
+                                We use the LLMs to map data fields and then set up <span style="color: orange">integration pipelines</span> to automate the process of data integration. </br>
+                                We experimented with different types of LLMs, locally installed LLMs from <span style="color: orange">Hugging-Face</span>HuggingFace using <span style="color: orange">LangChain</span> vs remote APIs and <span style="color: orange">prompt-engineering</span> to improve the accuracy of the responses. </br>
+
+                                <span style="font-size: small">(Code cannot be shared due its proprietary nature.)</span>
                             </p>
                         </div>
                     </div>
@@ -143,34 +196,7 @@
 
             <div class="category-card">
                 <div class="card-title">
-                    <h1>Networks</h1>
-                </div>
-                <div class="card-row">
-                    <div class="card">
-                        <div class="info">
-                            <i class='bx bx-network-chart' ></i>
-                            <h1>Network Simulator</h1>
-                            <p>
-                                Add info
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="info">
-                            <i class='bx bx-collapse-horizontal' ></i>
-                            <h1>Network Compression Detection</h1>
-                            <p>
-                                Add info
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="category-card">
-                <div class="card-title">
-                    <h1>Cloud Computing</h1>
+                    <h1>CLOUD COMPUTING</h1>
                 </div>
                 <div class="card-row">
                     <div class="card">
@@ -178,18 +204,144 @@
                             <i class='bx bx-cloud-upload' ></i>
                             <h1>Auto Cloud Deployer</h1>
                             <p>
-                                Add info
+                                <span style="font-size: small">Sponsored by <a href="https://www.openprisetech.com" target="_blank">Openprise</a></span></br>
+
+                                A tool to <span style="color: orange">automate</span> deploying applications to cloud service providers, support for <span style="color: orange">AWS EB2, Google Cloud Run GCP, Azure Container Instances</span>.</br>
+                                We <span style="color: orange">cut the time taken by 75-80%</span> and the number of steps taken to 2: providing a config file, and selecting a cloud service provider.</br>
+                                We developed a <span style="color: orange">custom mapping language</span> to make the application <span style="color: orange">provider agnostic</span>, by using our config format, the user can deploy to any cloud service provider.</br>
+                                We also allowed the user to <span style="color: orange">monitor</span> any applications that were deployed using our application.</br>
+
+                                <span style="font-size: small">(Code cannot be shared due its proprietary nature.)</span>
                             </p>
+                        </div>
+                        <button id="acidButton" class="projectButton">See More</button>
+                        <div id="acidModal-root">
+                            <div id="acidModal" class="modal">
+                                <div class="modal-content">
+                                    <div class="info">
+                                        <h1>Auto-Cloud Deployer</h1>
+                                        <p>
+                                        <h2>Overview</h2>
+
+                                        The following diagram shows how the acid works at high-level:
+                                        </br></br>
+                                        <img src="assets/acid/overview.jpg" width=70% height=80% alt="overview">
+                                        </br></br>
+                                        <ol style="text-align: left">
+                                            <li>User provides docker-compose.yml with required parameters</li>
+                                            <li>YAML file is parsed and parameters are compared with requirements</li>
+                                            <li>For missing parameters wizard is activated and prompts user for the missing parameters</li>
+                                            <li>Application starts the deployment process for the selected provider</li>
+                                            <li>Returns confirmation of successful deployment or errors that are logged to the logs.txt created in the current directory.</li>
+                                        </ol>
+
+                                        </p>
+
+                                        <p>
+                                        <h2>Detailed Data Flow Diagram</h2>
+                                        <img src="assets/acid/dataflow_detailed.jpg" alt="dataflow_detailed" style="width:70%">
+                                        </p>
+
+                                        <p>
+                                        <h2>Command Line Flags Supported</h2>
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th>Commands</th>
+                                                <th>Options</th>
+                                                <th>Description</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>up</td>
+                                                <td></td>
+                                                <td>Initiate deployment process</td>
+                                            </tr>
+                                            <tr>
+                                                <td>help</td>
+                                                <td>-h, --help</td>
+                                                <td>Print help info</td>
+                                            </tr>
+                                            <tr>
+                                                <td>logs</td>
+                                                <td>-lg, --logs</td>
+                                                <td>Prints local logs to the console</td>
+                                            </tr>
+                                            <tr>
+                                                <td>wizard</td>
+                                                <td>-hh, --handheld</td>
+                                                <td>Interactive development</td>
+                                            </tr>
+                                            <tr>
+                                                <td>version</td>
+                                                <td>-v, --version</td>
+                                                <td>Console logs the app version info</td>
+                                            </tr>
+                                            <tr>
+                                                <td>init</td>
+                                                <td>-i, --init</td>
+                                                <td>undefined</td>
+                                            </tr>
+                                            <tr>
+                                                <td>docs</td>
+                                                <td></td>
+                                                <td>Shows acid.yml template</td>
+                                            </tr>
+                                            <tr>
+                                                <td>providers</td>
+                                                <td>-p, --providers</td>
+                                                <td>Documents about and links to service providers</td>
+                                            </tr>
+                                            <tr>
+                                                <td>down</td>
+                                                <td>-b, --burn</td>
+                                                <td>Removes the acid.yml and log files</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        </p>
+
+                                        <p>
+                                        <h2>Example Usage</h2>
+                                        This example aims to demonstrate the usage of the acid tool:
+
+                                        </br></br>
+
+                                        acid
+                                        </br>
+                                        <img src="assets/acid/acid.png" alt="acid" style="width:70%">
+                                        </br></br>
+                                        acid up </br>
+                                        <img src="assets/acid/acid_up.png" alt="acid" style="width:70%">
+                                        </br></br>
+                                        acid map page-1 </br>
+                                        <img src="assets/acid/acid_map_1.png" alt="acid" style="width:70%">
+                                        </br></br>
+                                        acid info page-1 </br>
+                                        <img src="assets/acid/acid_info_page.png" alt="acid" style="width:70%">
+                                        </br></br>
+                                        acid provider page-1 </br>
+                                        <img src="assets/acid/acid_info_provider.png" alt="acid" style="width:70%">
+                                        </br></br>
+                                        acid list </br>
+                                        <img src="assets/acid/acid_list.png" alt="acid" style="width:70%">
+                                        </br></br>
+                                        acid monitor </br>
+                                        <img src="assets/acid/acid_monitor.png" alt="acid" style="width:70%">
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-
-
             <div class="category-card">
                 <div class="card-title">
-                    <h1>Full Stack</h1>
+                    <h1>FULL STACK DEVELOPMENT</h1>
                 </div>
                 <div class="card-row">
                     <div class="card">
@@ -197,9 +349,46 @@
                             <i class='bx bx-hotel' ></i>
                             <h1>Hotels.com Clone</h1>
                             <p>
-                                Add info
+                                Full-stack website with a <span style="color: orange">multi-threaded server</span> using <span style="color: orange">Java</span> and Jetty servlets, <span style="color: orange">database management</span> using JDBC and web pages with dynamic elements.</br>
+                                <span style="color: orange">Dynamic</span> elements of the webpage are created using <span style="color: orange">JavaScript</span> and <span style="color: orange">AJAX</span>, to load map location for Hotels and provide real time weather data at the hotel location.</br>
+                                A login/logout page as well as <span style="color: orange">session tracking</span> to maintain login status was implemented. <span style="color: orange">CRUD</span> operations are supported for reviews. </br>
+                                Hotel ratings were dynamically updated upon addition of a new review. </br>
+
                             </p>
                         </div>
+                        <a class="projectButton" target="_blank" href="https://github.com/aditya17varma/Hotel.com-Clone">See More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <div class="card-title">
+                    <h1>NETWORK PROGRAMMING</h1>
+                </div>
+                <div class="card-row">
+                    <div class="card">
+                        <div class="info">
+                            <i class='bx bx-network-chart' ></i>
+                            <h1>Network Simulator</h1>
+                            <p>
+                                <span style="color:orange">Simulated</span> a network of 3 nodes using NS-3. </br>
+                                The middle node implements a Quality of Service <span style="color:orange">(QoS)</span> policy, to manage network traffic flow. </br>
+                                I implemented Strict Priority Queue <span style="color:orange">(SPQ)</span> and Deficit Round Robin <span style="color:orange">(DRR)</span> algorithms as QoS. </br>
+                            </p>
+                        </div>
+                        <a class="projectButton" target="_blank" href="https://github.com/aditya17varma/Network-Simulation-Differentiated-Services/tree/master">See More</a>
+                    </div>
+                    <div class="card">
+                        <div class="info">
+                            <i class='bx bx-collapse-horizontal' ></i>
+                            <h1>Network Compression Detection</h1>
+                            <p>
+                                Detecting the presence of network compression in cooperative and non-cooperative networks.</br>
+                                For a cooperative network, the presence of compression is detected by comparing the time taken for <span style="color: orange">low-entropy</span> and <span style="color:orange">high-entropy</span> data to be transmitted. A <span style="color:orange">UDP</span> packet train, bookended by <span style="color: orange">TCP</span> packets is used.</br>
+                                For a non-cooperative network, the presence of compression is detected by comparing the time taken for an RST packet to be transmitted. I implemented the standalone application using <span style="color:orange">Raw Sockets</span>.
+                            </p>
+                        </div>
+                        <a class="projectButton" target="_blank" href="https://github.com/aditya17varma/Network-Compression-Detection">See More</a>
                     </div>
                 </div>
             </div>

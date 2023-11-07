@@ -89,6 +89,8 @@ window.addEventListener('scroll', function () {
     }
 });
 
+// About Modal
+
 let modalRoot = document.getElementById('modal-root');
 let modalButton = document.getElementById('contactButton');
 let modalContact = document.getElementById('contactModal');
@@ -99,10 +101,12 @@ modalContact.addEventListener('click', modalClick)
 
 function displayModal(){
     modalRoot.classList.add('visible');
+    // modalRoot.style.display = 'block';
 }
 
 function closeModal(){
     modalRoot.classList.remove('visible');
+    // modalRoot.style.display = 'none';
 }
 
 function modalClick(event){
@@ -110,6 +114,60 @@ function modalClick(event){
     event.stopImmediatePropagation();
     return false;
 }
+
+// Federated ML Modal
+
+let mlModalRoot = document.getElementById('MLModal-root');
+let mlModalButton = document.getElementById('MLButton');
+let mlModal = document.getElementById('MLModal');
+
+mlModalRoot.addEventListener('click', closeMLModal);
+mlModalButton.addEventListener('click', displayMLModal);
+mlModal.addEventListener('click', MLModalClick)
+
+function displayMLModal(){
+    mlModalRoot.classList.add('visible');
+}
+
+function closeMLModal(){
+    mlModalRoot.classList.remove('visible');
+}
+
+function MLModalClick(event){
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    return false;
+}
+
+// ACID Modal
+
+let acidModalRoot = document.getElementById('acidModal-root');
+let acidModalButton = document.getElementById('acidButton');
+let acidModal = document.getElementById('acidModal');
+
+acidModalRoot.addEventListener('click', closeACIDModal);
+acidModalButton.addEventListener('click', displayACIDModal);
+acidModal.addEventListener('click', ACIDModalClick)
+
+function displayACIDModal(){
+    acidModalRoot.classList.add('visible');
+    // acidModalRoot.style.display = 'block';
+    console.log('displaying ACID modal')
+}
+
+function closeACIDModal(){
+    acidModalRoot.classList.remove('visible');
+    // acidModalRoot.style.display = 'none';
+    console.log('closing ACID modal')
+}
+
+function ACIDModalClick(event){
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    return false;
+}
+
+
 
 
 
