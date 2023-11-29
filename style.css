@@ -420,7 +420,7 @@ header .info-text .scroll::before{
     color: orange;
 }
 
-#projects #MLModal-root, #acidModal-root {
+#projects #MLModal-root, #AutoIntModal-root, #acidModal-root {
     padding: 30px;
     position: fixed;
     overflow: auto;
@@ -434,7 +434,7 @@ header .info-text .scroll::before{
     transition: opacity 0.15s ease-out, width 0s linear 0.15s, height 0s linear 0.15s;
 }
 
-#projects #MLModal-root.visible, #acidModal-root.visible {
+#projects #MLModal-root.visible, #AutoIntModal-root.visible, #acidModal-root.visible {
     width: 100%;
     height: 100%;
     opacity: 1;

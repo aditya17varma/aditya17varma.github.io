@@ -139,6 +139,29 @@ function MLModalClick(event){
     return false;
 }
 
+// AutoInt Modal
+let autoIntModalRoot = document.getElementById('AutoIntModal-root');
+let autoIntModalButton = document.getElementById('AutoIntButton');
+let autoIntModal = document.getElementById('AutoIntModal');
+
+autoIntModalRoot.addEventListener('click', closeAutoIntModal);
+autoIntModalButton.addEventListener('click', displayAutoIntModal);
+autoIntModal.addEventListener('click', AutoIntModalClick)
+
+function displayAutoIntModal(){
+    autoIntModalRoot.classList.add('visible');
+}
+
+function closeAutoIntModal(){
+    autoIntModalRoot.classList.remove('visible');
+}
+
+function AutoIntModalClick(event){
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    return false;
+}
+
 // ACID Modal
 
 let acidModalRoot = document.getElementById('acidModal-root');
