@@ -115,6 +115,38 @@ function modalClick(event){
     return false;
 }
 
+// Resume Modal
+let resumeModalRoot = document.getElementById('resumeModal-root');
+let resumeModalButton = document.getElementById('resumeButton');
+let modalResume = document.getElementById('resumeModal');
+
+resumeModalRoot.addEventListener('click', closeResumeModal);
+resumeModalButton.addEventListener('click', displayResumeModal);
+modalResume.addEventListener('click', ResumeModalClick)
+
+
+function displayResumeModal(){
+    resumeModalRoot.classList.add('visible');
+
+    // Set the iframe source to load the PDF (replace 'assets/Aditya_Kunatharaju_Resume.pdf' with your actual PDF path)
+    let pdfIframe = document.getElementById('pdfIframe');
+    pdfIframe.src = 'assets/Aditya_Kunatharaju_Resume.pdf';
+}
+
+function closeResumeModal(){
+    resumeModalRoot.classList.remove('visible');
+
+    // Reload the iframe to reset the PDF position
+    let pdfIframe = document.getElementById('pdfIframe');
+    pdfIframe.src = 'about:blank';
+}
+
+function ResumeModalClick(event){
+    event.stopPropagation();
+    event.stopImmediatePropagation();
+    return false;
+}
+
 // Federated ML Modal
 
 let mlModalRoot = document.getElementById('MLModal-root');

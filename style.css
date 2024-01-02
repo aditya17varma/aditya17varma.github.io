@@ -254,6 +254,63 @@ header .info-text .scroll::before{
     transition: opacity 0.15s ease-out;
 }
 
+#about #resumeModal-root {
+    padding: 30px;
+    position: fixed;
+    overflow: auto;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    left : 0;
+    top: 0;
+    width: 0;
+    height : 0;
+    opacity: 0;
+    transition: opacity 0.15s ease-out, width 0s linear 0.15s, height 0s linear 0.15s;
+}
+
+#about #resumeModal-root.visible {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: opacity 0.15s ease-out;
+    display: block;
+}
+
+#about #resumeModal {
+    padding: 30px;
+    margin: 20px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+#about #resumeModal .modal-content {
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    text-align: center;
+    height: inherit;
+    width: inherit;
+}
+
+#about .pdf-container {
+    padding: 10px;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    width: 80vh;
+    max-height: 11in;
+    max-width: 8.5in;
+}
+
+embed {
+    width: 100%;
+    height: 100%;
+}
+
 #about .modal .close{
     color: #fff;
     float: right;

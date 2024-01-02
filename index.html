@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-wiodth, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="style.css" type="text/css">
@@ -14,7 +14,7 @@
     <header>
         <div id="particles"></div>
         <div class="info-text">
-            <h1>Adi Kunatharaju</h1>
+            <h1>Aditya Kunatharaju</h1>
             <h3>Welcome to my webpage</h3>
             <a href="#about" class="scroll">
                 <i class="bx bxs-down-arrow"></i>
@@ -23,10 +23,15 @@
     </header>
 
     <section id="about">
+
         <div class="header">
             <h1>About Me</h1>
 <!--            <a onclick=displayModal()>Contact Me</a>-->
-            <button id="contactButton">Contact Me</button>
+            <div>
+                <button id="resumeButton">Resume</button>
+                <button id="contactButton">Contact Me</button>
+            </div>
+
         </div>
 
         <div id="modal-root">
@@ -39,6 +44,26 @@
                         Email: <a href="mailto: aditya17varma@gmail.com">aditya17varma@gmail.com</a> </br>
                         LinkedIn: <a href="https://www.linkedin.com/in/adityakunatharaju/" target="_blank">https://www.linkedin.com/in/adityakunatharaju/</a> </br>
                     </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="resumeModal-root">
+            <div id="resumeModal" class="modal">
+                <span class="close" onclick=closeResumeModal()>&times</span>
+                <div class="modal-content">
+
+                    <h1>Resume</h1>
+                    <div class="pdf-container">
+                        <iframe
+                                id="pdfIframe"
+                                src=""
+                                width="100%"
+                                height="100%"
+                                frameborder="0">
+                        </iframe>
+                    </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -416,6 +441,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
 
