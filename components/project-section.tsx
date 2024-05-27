@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
-import Project from './project';
-import { projectsData } from '@/lib/data'
+import ProjectCard from './project-card';
+import ProjectPopup from './project-popup';
+import { ProjectType } from '@/lib/data';
 
 type ProjectSectionProps = {
   title: string;
-  projects: typeof projectsData;
+  projects: ProjectType[];
 };
 
 export default function ProjectSection({ title, projects}: ProjectSectionProps) {
   const { scrollYProgress } = useScroll();
   const bgColor = useTransform(scrollYProgress, [0, 1], ['#f9fafb', '#e2e8f0']);
+
+  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
 
   return (
     <motion.div 
@@ -23,10 +26,19 @@ export default function ProjectSection({ title, projects}: ProjectSectionProps) 
       {
         projects.map((project, index) => (
           <React.Fragment key={index}>
-            <Project {...project} />
+            <ProjectCard 
+              {...project}
+              onClick={() => setSelectedProject(project)} 
+            />
           </React.Fragment>
         ))
       }
+      {selectedProject && (
+        <ProjectPopup
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </motion.div>
   );
 };

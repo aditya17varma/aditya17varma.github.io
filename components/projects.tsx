@@ -2,7 +2,7 @@
 
 import React from 'react'
 import SectionHeading from './section-heading'
-import { projectsData } from '@/lib/data'
+import { MLProjectsData } from '@/lib/data'
 import ProjectSection from './project-section';
 import { useSectionInView } from '@/lib/hooks';
 
@@ -45,8 +45,8 @@ export default function Projects() {
         }
       </motion.div>     */}
 
-        <ProjectSection title="Machine Learning" projects={projectsData} />
-        <ProjectSection title="Distributed Systems" projects={projectsData} />
+        <ProjectSection title="Machine Learning" projects={MLProjectsData} />
+        {/* <ProjectSection title="Distributed Systems" projects={projectsData} /> */}
     </section>
   )
 }

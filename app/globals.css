@@ -14,3 +14,8 @@ html.dark {
 .borderBlack {
     @apply border border-black/10;
 }
+
+.project-popup-content {
+    max-height: 70vh;
+    overflow-y: auto;
+}
