@@ -1,17 +1,25 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 import { StaticImageData } from "next/image";
+
+// Snapshots
+import golfCV_snapshot from "@/public/snapshots/golfCV_snapshot.png"
+import autoIntegrate_snapshot from "@/public/snapshots/auto-integrate_snapshot.png"
+import fedML_snapshot from "@/public/snapshots/fedML_snapshot.png"
 
 // ML Projects
 // GolfCV
 import golfCVDistance from "@/public/mlData/golfCV/golfcv_distances_eg.png";
 import golfCVImg1 from "@/public/mlData/golfCV/golfcv_eg1.png";
 import golfCVImg2 from "@/public/mlData/golfCV/golfcv_eg2.png";
+// AutoIntegrate
+import autoIntegrateImg from "@/public/mlData/autoIntegrate/autoIntegrate_Poster.jpg";
+import autoIntegrateImg2 from "@/public/mlData/autoIntegrate/autoIntegrateData.png";
+import autoIntegrateImg3 from "@/public/mlData/autoIntegrate/autoIntegrateConclusion.png";
+import autoIntegrateImg4 from "@/public/mlData/autoIntegrate/autoIntegrateDesign.png";
+// FedML
+import fedMLImg from "@/public/mlData/fedML/fedML.png";
 
 export type ProjectType = {
   title: string;
@@ -22,6 +30,8 @@ export type ProjectType = {
   additionalImages?: string[];
   videoUrl?: string;
   githubUrl?: string;
+  sponsor?: string;
+  sponsorUrl?: string;
 };
 
 export const links = [
@@ -53,28 +63,68 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Software Engineer, KloudDB",
+    location: "San Francisco, CA",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Software Engineer at KloudDB, a startup that is building Postgres Monitoring and Security Solutions.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2024 - present",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Graduate School",
+    location: "University of San Francisco",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "I graduated with a Master's in Computer Science, with a 3.9 GPA. The USF CS Bridge program allowed me to transition into tech from a legal background.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2021-2024",
+  },
+  {
+    title: "Teaching Assistant & Tutor",
+    location: "University of San Francisco",
+    description:
+      "I worked as a TA for the Machine Learning and AI classes. I also tutored USF student-athletes in Computer Science.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2022 - 2024",
+  },
+  {
+    title: "SWE Intern",
+    location: "Openprise",
+    description:
+      "My team buil the Auto-Cloud Deployer tool, during the summer of 2022. Worked with Mario Lim at Openprise.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2022",
+  },
+  {
+    title: "Associate",
+    location: "Mandala Law Offices, India",
+    description:
+      "First year associate at Mandala Law Offices, a boutique law firm in India, specializing in corporate law.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2021-2024",
+  },
+  {
+    title: "Law School",
+    location: "O.P. Jindal Global University, India",
+    description:
+      "I graduated with a Bachelor of Laws (LL.B., equivalent to JD) with a 3.8 GPA from one of India's top law schools.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2017-2020",
+  },
+  {
+    title: "Legal Assistant",
+    location: "Law Offices of Jonathan Ricasa, Los Angeles",
+    description:
+      "I helped with legal research, and drafting for a boutique law practice specializing in Class Action and Collective Action lawsuits.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2016-2017",
+  },
+  {
+    title: "College",
+    location: "University of California, Los Angeles",
+    description:
+      "I graduated with a Bachelor of Arts in History, with a focus on Roman and Byzantine history.",
+    icon: React.createElement(LuGraduationCap),
+    date: "2012-2016",
   },
 ] as const;
 
@@ -84,7 +134,7 @@ export const MLProjectsData: ProjectType[] = [
     description:
       "Used Neural Networks, Computer Vision, and a custom KNN algorithm to detect and compare golf-swings.",
     tags: ["Python", "PyTorch", "MediaPipe", "OpenCV", "Neural Networks", "KNN"],
-    imageUrl: corpcommentImg,
+    imageUrl: golfCV_snapshot,
     detailedDescription:
       "A project that combines my passions of sports and tech!\n\n\
       I used a CNN to detect the 8 key positions of a golf swing (Address, top of backswing, impact, finish, etc.).\n\n\
@@ -94,22 +144,36 @@ export const MLProjectsData: ProjectType[] = [
     githubUrl: "https://github.com/aditya17varma/GolfSwingAnalyzer",
   },
   {
-    title: "rmtDev",
+    title: "Auto-Integrate",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Integrate data from multiple sources and applications using custom built GPT-4 multi-agent framework. (Sponsored by ObjectEdge)",
+    tags: ["Python", "GPT-4", "Autogen", "OpenAI", "Llama-2", "LLM"],
+    imageUrl: autoIntegrate_snapshot,
     detailedDescription:
-      "This project was created to help golfers improve their swing. It uses a webcam to record the golfer's swing. The video is then processed by a custom KNN algorithm to detect the swing. The swing is then compared to a database of professional golfers' swings.",
-  },
+      "A tool to auto-integrate data from multiple applications by using the Large Language Models (LLM) from OpenAI, Microsoft, and Meta.\n\n\
+      We built a custom GPT-4 multi-model conversational framework to the process of data integration.\n\n\
+      We use the multi-model framework to gather API data information and then map data fields. We then set up integration pipelines to automate the process of data integration.\n\n\
+      We conducted R&D with different LLMs and deployments, locally installed LLMs from Hugging-Face using LangChain vs remote APIs and prompt-engineering to improve the accuracy of the responses.\n\n\
+      GPT-4 was the best performing LLM. Consistently gave us reliable mappings with minimal hallucinations, and in the required format.\n\
+      Using a multi-agent framework further increased reliability and allowed us to generate output formats with greater complexity, which made generating the integration pipelines easier.\n\n\
+      (Open image in new tab to view full size)",
+    additionalImages: [autoIntegrateImg.src, autoIntegrateImg2.src, autoIntegrateImg3.src, autoIntegrateImg4.src],
+    sponsor: "ObjectEdge",
+    sponsorUrl: "https://www.objectedge.com",
+  }
+  ,
   {
-    title: "Word Analytics",
+    title: "Federated Machine Learning",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
+      "Machine learning model that trains on data from multiple sources without sharing the data.",
     tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: fedML_snapshot,
     detailedDescription:
-      "This project was created to help golfers improve their swing. It uses a webcam to record the golfer's swing. The video is then processed by a custom KNN algorithm to detect the swing. The swing is then compared to a database of professional golfers' swings.",
+      "This is a Federated Machine Learning system that uses a Central Coordinator and has learner nodes which are Mutex/Blocking.\n\n\
+      The learner nodes will train the model one after one another, with the Central Coordinator broadcasting the most up-to-date model back to the learner nodes for the next iteration.\n\n\
+      On the MNIST dataset, we are getting accuracy that is within 3% of a consolidated model.",
+    additionalImages: [fedMLImg.src],
+    githubUrl: "https://github.com/de-learn"
   },
 ] as const;
 

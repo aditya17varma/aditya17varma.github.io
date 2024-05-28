@@ -58,10 +58,31 @@ export default function ProjectPopup({
                     dark:bg-white/10 dark:text-white/60 dark:hover:text-white'
                     href={project.githubUrl} target='_blank' rel='noopener noreferrer'>
                   <FaGithubSquare />
-                  <span>GitHub</span>
+                  <span className='text-xl'>GitHub</span>
                 </a>
                 )}
+                {/* Sponsor Button */}
+                {project.sponsor && (
+                    <a className='mt-4 bg-gray-100 p-4 inline-flex text-gray-700 items-center gap-2 text-[1.35rem] rounded-full
+                    active:scale-105 transition cursor-pointer border borderBlack
+                    hover:text-gray-950 hover:border-orange-400
+                    dark:bg-white/10 dark:text-white/60 dark:hover:text-white'
+                    href={project.sponsorUrl} target='_blank' rel='noopener noreferrer'>
+                    <span className='text-xl'>Sponsored By {project.sponsor}</span>
+                    </a>
+                )}
+                {project.sponsor && (
+                    <p
+                    className='mt-2 text-gray-700 text-left text-sm
+                    dark:text-gray-300'
+                    >
+                        (Propietary code cannot be shared publicly)
+                    </p>
+                )}
+                {/* Horizontal Ruler */}
+                <hr className='mt-4 border-t border-gray-300 dark:border-gray-700' />
                 {/* Description */}
+                <h4 className='mt-4 text-xl font-semibold text-center'>Details</h4>
                 <p
                 className='mt-2 text-gray-700 text-center
                 dark:text-gray-300'
