@@ -5,9 +5,10 @@ import { StaticImageData } from "next/image";
 
 // Snapshots
 import golfCV_snapshot from "@/public/snapshots/golfCV_snapshot.png"
-import autoIntegrate_snapshot from "@/public/snapshots/auto-integrate_snapshot.png"
+import autoIntegrate_snapshot from "@/public/snapshots/autoIntegrate_snapshot.png"
 import fedML_snapshot from "@/public/snapshots/fedML_snapshot.png"
 import drone_snapshot from "@/public/snapshots/drone_snapshot.jpg"
+import autoCloud_snapshot from "@/public/snapshots/autoCloud_snapshot.jpg"
 
 // ML Projects
 // GolfCV
@@ -26,6 +27,14 @@ import fedMLImg from "@/public/mlData/fedML/fedML.png";
 // Drone
 import droneImg1 from "@/public/bigData/geospatial/drone_eg1.png";
 import droneImg2 from "@/public/bigData/geospatial/drone_eg2.png";
+
+// Cloud Projects
+// Auto-Cloud Deployer
+import autoCloudImg1 from "@/public/cloudData/dataflow_detailed.jpg";
+import autoCloudImg2 from "@/public/cloudData/acid_info_provider.png";
+import autoCloudImg3 from "@/public/cloudData/acid.png";
+import autoCloudImg4 from "@/public/cloudData/acid_monitor.png";
+import autoCloudImg5 from "@/public/cloudData/acid_map_1.png";
 
 export type ProjectType = {
   title: string;
@@ -146,7 +155,7 @@ export const MLProjectsData: ProjectType[] = [
       I used a CNN to detect the 8 key positions of a golf swing (Address, top of backswing, impact, finish, etc.).\n\n\
       I then leveraged Google's Mediapipe library and OpenCV to detect pose landmarks. These pose-landmarks were used to compare golf-swings using a custom KNN algorithm to provide and present classification to the user.",
     additionalImages: [golfCVDistance.src, golfCVImg1.src, golfCVImg2.src],
-    videoUrl: "/mlData/golfCV/golfcv_demo.mp4",
+    videoUrl: "./mlData/golfCV/golfcv_demo.mp4",
     githubUrl: "https://github.com/aditya17varma/GolfSwingAnalyzer",
   },
   {
@@ -187,8 +196,8 @@ export const bigDataProjectsData: ProjectType[] = [
   {
     title: "Geospatial Tracking and Resource Allocation",
     description:
-      "Geospatial tracking of drones and resource allocation using different policies.",
-    tags: ["Go", "Protobuf", "ML"],
+      "Geospatial tracking of drones and resource allocation of charging using different policies.",
+    tags: ["Go", "Protobuf", "Distributed Systems", "ML"],
     imageUrl: drone_snapshot,
     detailedDescription:
       "I investigated the use of geospatial tracking using distributed systems concepts to track drones.\n\n\
@@ -197,9 +206,27 @@ export const bigDataProjectsData: ProjectType[] = [
       The ML Exepecation Maximization policy was the best performing policy, as it was able to adapt to a dynamic environment and allocate charging hubs by minimizaing downtime.\n\n\
       I set this up as a simulation using Go and Protobuf to communicate state between the drones, charging hubs, and the central planner. Making it easy to add and test additional policies, as well as scale the simulation to a larger number of drones and hubs.",
     additionalImages: [droneImg1.src, droneImg2.src],
-    videoUrl: "/bigData/geospatial/drone_demo.mp4",
+    videoUrl: "./bigData/geospatial/drone_demo.mp4",
     githubUrl: "https://github.com/aditya17varma/Geospatial",
   },
+] as const;
+
+export const cloudProjectsData: ProjectType[] = [
+  {
+    title: "Auto-Cloud Deployer",
+    description:
+      "Automating the deployment of application to cloud service providers.",
+    tags: ["Go", "Protobuf", "Distributed Systems", "ML"],
+    imageUrl: autoCloud_snapshot,
+    detailedDescription:
+      "A tool to automate deploying applications to cloud service providers, support for AWS EB2, Google Cloud Run GCP, Azure Container Instances.\n\n\
+      We cut the time taken by 75-80% and the number of steps taken to 2: providing a config file, and selecting a cloud service provider.\n\n\
+      We developed a custom mapping language to make the application provider agnostic, by using our config format, the user can deploy to any cloud service provider.\n\n\
+      We also allowed the user to monitor any applications that were deployed using our application.",
+    additionalImages: [autoCloudImg1.src, autoCloudImg2.src, autoCloudImg3.src, autoCloudImg4.src, autoCloudImg5.src],
+    sponsor: "Openprise",
+    sponsorUrl: "https://www.openprisetech.com"
+  }
 ] as const;
 
 export const skillsData = [

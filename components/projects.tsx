@@ -2,7 +2,7 @@
 
 import React from 'react'
 import SectionHeading from './section-heading'
-import { MLProjectsData, bigDataProjectsData } from '@/lib/data'
+import { MLProjectsData, bigDataProjectsData, cloudProjectsData } from '@/lib/data'
 import ProjectSection from './project-section';
 import { useSectionInView } from '@/lib/hooks';
 
@@ -19,6 +19,7 @@ export default function Projects() {
 
         <ProjectSection title="Machine Learning" projects={MLProjectsData} />
         <ProjectSection title="Distributed Systems" projects={bigDataProjectsData} />
+        <ProjectSection title="Cloud Computing" projects={cloudProjectsData} />
     </section>
   )
 }
