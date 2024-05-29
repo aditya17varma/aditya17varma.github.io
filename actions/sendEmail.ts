@@ -4,7 +4,6 @@ import React from "react";
 import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
-import { get } from "http";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
