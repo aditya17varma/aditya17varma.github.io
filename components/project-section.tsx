@@ -22,7 +22,14 @@ export default function ProjectSection({ title, projects}: ProjectSectionProps) 
       dark:bg-gray-700 dark:bg-opacity-10'
       // style={{ backgroundColor: bgColor }}
     >
-      <h3 className='font-bold pt-3 pb-3'>{title}</h3>
+      <div>
+      {/* Project Section Title */}
+      <h3 className='font-bold'>{title}</h3>
+      {/* Horizontal Ruler */}
+      <hr className='mt-4 pt-3 pb-3 border-gray-300 dark:border-gray-700' />
+
+      </div>
+      {/* Project Cards */}
       {
         projects.map((project, index) => (
           <React.Fragment key={index}>

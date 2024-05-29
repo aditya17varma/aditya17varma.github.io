@@ -2,7 +2,7 @@
 
 import React from 'react'
 import SectionHeading from './section-heading'
-import { MLProjectsData } from '@/lib/data'
+import { MLProjectsData, bigDataProjectsData } from '@/lib/data'
 import ProjectSection from './project-section';
 import { useSectionInView } from '@/lib/hooks';
 
@@ -17,36 +17,8 @@ export default function Projects() {
     >
       <SectionHeading>Projects</SectionHeading>
 
-      {/* <motion.div 
-        className='border border-orange-300 mb-8 p-4'
-        style={{ backgroundColor: bgColorMachineLearning }}
-      > */}
-        {/* <h3 className='font-bold pt-3 pb-3'>Machine Learning</h3>
-        {
-          projectsData.map((project, index) => (
-            <React.Fragment key={index}>
-              <Project {...project} />
-            </React.Fragment>
-          ))
-        }
-      </motion.div>   
-
-      <motion.div 
-        className='border border-orange-300 p-4'
-        style={{ backgroundColor: bgColorDistributedSystems }}
-      >
-        <h3 className='font-bold pt-3 pb-3'>Distributed Systems</h3>
-        {
-          projectsData.map((project, index) => (
-            <React.Fragment key={index}>
-              <Project {...project} />
-            </React.Fragment>
-          ))
-        }
-      </motion.div>     */}
-
         <ProjectSection title="Machine Learning" projects={MLProjectsData} />
-        {/* <ProjectSection title="Distributed Systems" projects={projectsData} /> */}
+        <ProjectSection title="Distributed Systems" projects={bigDataProjectsData} />
     </section>
   )
 }

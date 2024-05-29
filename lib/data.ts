@@ -7,6 +7,7 @@ import { StaticImageData } from "next/image";
 import golfCV_snapshot from "@/public/snapshots/golfCV_snapshot.png"
 import autoIntegrate_snapshot from "@/public/snapshots/auto-integrate_snapshot.png"
 import fedML_snapshot from "@/public/snapshots/fedML_snapshot.png"
+import drone_snapshot from "@/public/snapshots/drone_snapshot.jpg"
 
 // ML Projects
 // GolfCV
@@ -20,6 +21,11 @@ import autoIntegrateImg3 from "@/public/mlData/autoIntegrate/autoIntegrateConclu
 import autoIntegrateImg4 from "@/public/mlData/autoIntegrate/autoIntegrateDesign.png";
 // FedML
 import fedMLImg from "@/public/mlData/fedML/fedML.png";
+
+// Distributed Systems Projects
+// Drone
+import droneImg1 from "@/public/bigData/geospatial/drone_eg1.png";
+import droneImg2 from "@/public/bigData/geospatial/drone_eg2.png";
 
 export type ProjectType = {
   title: string;
@@ -174,6 +180,25 @@ export const MLProjectsData: ProjectType[] = [
       On the MNIST dataset, we are getting accuracy that is within 3% of a consolidated model.",
     additionalImages: [fedMLImg.src],
     githubUrl: "https://github.com/de-learn"
+  },
+] as const;
+
+export const bigDataProjectsData: ProjectType[] = [
+  {
+    title: "Geospatial Tracking and Resource Allocation",
+    description:
+      "Geospatial tracking of drones and resource allocation using different policies.",
+    tags: ["Go", "Protobuf", "ML"],
+    imageUrl: drone_snapshot,
+    detailedDescription:
+      "I investigated the use of geospatial tracking using distributed systems concepts to track drones.\n\n\
+      I also looked at resource allocation using different policies, I was trying to allocate a limited number of charging spots at 2 hubs to multiple drones.\n\
+      Some of the policies I looked at were: Shortest-Distance, Lowest-Battery, and Exepecation Maximization.\n\n\
+      The ML Exepecation Maximization policy was the best performing policy, as it was able to adapt to a dynamic environment and allocate charging hubs by minimizaing downtime.\n\n\
+      I set this up as a simulation using Go and Protobuf to communicate state between the drones, charging hubs, and the central planner. Making it easy to add and test additional policies, as well as scale the simulation to a larger number of drones and hubs.",
+    additionalImages: [droneImg1.src, droneImg2.src],
+    videoUrl: "/bigData/geospatial/drone_demo.mp4",
+    githubUrl: "https://github.com/aditya17varma/Geospatial",
   },
 ] as const;
 
