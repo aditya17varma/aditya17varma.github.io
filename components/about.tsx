@@ -20,16 +20,14 @@ export default function About() {
     id='about'
     >
         <SectionHeading>About me</SectionHeading>
-        <p className='mb-3'>
-            I am a highly skilled and motivated software developer located in San Francisco, CA. 
-            I am passionate about building scalable and efficient software solutions, that can be used to solve real world problems. 
-            I recently completed my Master&apos;s degree in Computer Science at the University of San Francisco, with an GPA of 3.9/4.0.
+        <p className='mb-3'> 
+            My ability to learn new skills allowed me to seamless transition into software engineering, I completed my Master&apos;s degree in Computer Science at the University of San Francisco with a <span className='italic'>GPA of 3.9/4.0</span>.
         </p>
         <p className='mb-3'>
-            My educational journey has been diverse, including a Bachelor of Laws from Jindal Global University, and a Bachelor of Arts in History from the University of California, Los Angeles. 
-            Prior work experiene includes working as a corporate lawyer in New Delhi, India, and as a paralegal in Los Angeles, CA.
+            My educational journey has been diverse, including a <strong>Bachelor of Laws</strong> from O.P. Jindal Global University, and a Bachelor of Arts in History from the University of California, Los Angeles. 
+            Prior work experiene includes working as a corporate lawyer in New Delhi, India, and as a legal assistant in Los Angeles, CA.
         </p>
-            Relevant coursework includes: Machine Learning, Intro to AI, Algorithms, Full-Stack Development, Network Programming, Modern Parallel Programming, and Human-Computer Interaction.
+            <strong>Relevant coursework</strong> includes: Machine Learning, Intro to AI, Algorithms, Full-Stack Development, Network Programming, Modern Parallel Programming, and Human-Computer Interaction.
         <p className='mb-3'>
             My diverse educational and work experience has given me a unique perspective on problem solving, and the ability to think outside the box. 
             It has also made me a strong communicator, and team player. I&apos;m a strong self-learner, always seeking to enhance my knowledge and skillset.

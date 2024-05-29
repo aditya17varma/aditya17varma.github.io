@@ -9,6 +9,8 @@ import autoIntegrate_snapshot from "@/public/snapshots/autoIntegrate_snapshot.pn
 import fedML_snapshot from "@/public/snapshots/fedML_snapshot.png"
 import drone_snapshot from "@/public/snapshots/drone_snapshot.jpg"
 import autoCloud_snapshot from "@/public/snapshots/autoCloud_snapshot.jpg"
+import portfolio_snapshot from "@/public/snapshots/portfolio_snapshot.png"
+import hotels_snapshot from "@/public/snapshots/hotels_snapshot.png"
 
 // ML Projects
 // GolfCV
@@ -35,6 +37,14 @@ import autoCloudImg2 from "@/public/cloudData/acid_info_provider.png";
 import autoCloudImg3 from "@/public/cloudData/acid.png";
 import autoCloudImg4 from "@/public/cloudData/acid_monitor.png";
 import autoCloudImg5 from "@/public/cloudData/acid_map_1.png";
+
+// Full-Stack Projects
+// Hotels
+import hotelsImg1 from "@/public/fullStackData/hotels/HotelInfo.png"
+import hotelsImg2 from "@/public/fullStackData/hotels/AddReview.png"
+import hotelsImg3 from "@/public/fullStackData/hotels/ModifyReview.png"
+import hotelsImg4 from "@/public/fullStackData/hotels/ReviewList.png"
+
 
 export type ProjectType = {
   title: string;
@@ -105,7 +115,7 @@ export const experiencesData = [
     title: "SWE Intern",
     location: "Openprise",
     description:
-      "My team buil the Auto-Cloud Deployer tool, during the summer of 2022. Worked with Mario Lim at Openprise.",
+      "My team built the Auto-Cloud Deployer tool, during the summer of 2022. Worked with Mario Lim at Openprise.",
     icon: React.createElement(CgWorkAlt),
     date: "2022",
   },
@@ -228,6 +238,35 @@ export const cloudProjectsData: ProjectType[] = [
     sponsorUrl: "https://www.openprisetech.com"
   }
 ] as const;
+
+export const fullStackProjectsData: ProjectType[] = [
+  {
+    title: "Portfolio",
+    description:
+      "This website!",
+    tags: ["React", "NextJS", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    imageUrl: portfolio_snapshot,
+    detailedDescription:
+    "A portfolio webiste to showcase my projects, skills, and a brief introduction about myself. This replaced an earlier portfolio website I built using base HTML and CSS. Building with React and Tailwind helped me make a more complex site but also increase consistency across it.\n\n\
+    Built primarily using React, NextJS, TypeScript, and TailwindCSS. I also used Framer Motion to add animation and transitions to improve the user experience, as well as incorporating email contact. Hosting on Vercel allowed me to serve a non-static webpage, and make use of NextJS's Server Actions to optimize load times.\n\n\
+    I used the concepts learnt in my full-stack web development class combined with some videos from the YouTuber ByteGrad (https://www.youtube.com/@ByteGrad) to build this site.",
+    githubUrl: "https://github.com/aditya17varma/aditya17varma.github.io"
+  },
+  {
+    title: "Hotels.com",
+    description:
+      "A Hotels.com full-stack application. With a frontend and backend built in Java, and connected to a MySQL database.",
+    tags: ["Java", "Bootstrap", "MySQL", "HTML", "Templates", "Servlets", "JavaScript"],
+    imageUrl: hotels_snapshot,
+    detailedDescription:
+    "Full-stack website with a multi-threaded server using Java and Jetty servlets, database management using JDBC and web pages with dynamic elements.\n\n\
+    Dynamic elements of the webpage are created using JavaScript and AJAX, to load map location for Hotels and provide real time weather data at the hotel location.\n\n\
+    A login/logout page as well as session tracking to maintain login status was implemented. CRUD operations are supported for reviews.\n\n\
+    Hotel ratings were dynamically updated upon addition of a new review.",
+    additionalImages: [hotelsImg1.src, hotelsImg2.src, hotelsImg3.src, hotelsImg4.src],
+    githubUrl: "https://github.com/aditya17varma/Hotel.com-Clone" 
+  }
+]
 
 export const skillsData = [
   "Python",

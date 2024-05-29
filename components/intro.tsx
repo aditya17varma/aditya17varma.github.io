@@ -66,7 +66,7 @@ export default function Intro() {
             <span className='font-bold'>Hello, I&apos;m Adi.</span> 
             {" "}I am a highly skilled and motivated software engineer located in <span className='font-bold'>San Francisco, CA.</span> 
             {" "}I am passionate about building scalable and efficient software solutions, that can be used to solve real world problems. 
-            {" "}I recently graduated with a <span className='font-bold'>Master&apos;s degree in Computer Science</span> from the University of San Francisco, with an <span className='italic'>GPA of 3.9/4.0.</span>
+            {" "}I recently graduated with a <span className='font-bold'>Master&apos;s degree in Computer Science</span> from the University of San Francisco.
         </motion.h1>
 
         <motion.div className='flex flex-col sm:flex-row justify-center gap-2 px-4 text-lg font-medium'
