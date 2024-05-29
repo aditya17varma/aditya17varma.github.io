@@ -11,6 +11,9 @@ import drone_snapshot from "@/public/snapshots/drone_snapshot.jpg"
 import autoCloud_snapshot from "@/public/snapshots/autoCloud_snapshot.jpg"
 import portfolio_snapshot from "@/public/snapshots/portfolio_snapshot.png"
 import hotels_snapshot from "@/public/snapshots/hotels_snapshot.png"
+import processor_snapshot from "@/public/snapshots/processor_snapshot.png"
+import compression_snapshot from "@/public/snapshots/compression_snapshot.jpg"
+import simulation_snapshot from "@/public/snapshots/simulation_snapshot.jpg"
 
 // ML Projects
 // GolfCV
@@ -44,6 +47,19 @@ import hotelsImg1 from "@/public/fullStackData/hotels/HotelInfo.png"
 import hotelsImg2 from "@/public/fullStackData/hotels/AddReview.png"
 import hotelsImg3 from "@/public/fullStackData/hotels/ModifyReview.png"
 import hotelsImg4 from "@/public/fullStackData/hotels/ReviewList.png"
+
+// Systems Projects
+// Processor
+import processorImg1 from "@/public/systemsData/processor/processor1.png"
+import processorImg2 from "@/public/systemsData/processor/processor2.png"
+// Compression
+import compressionImg1 from "@/public/systemsData/compression/compression1.png"
+import compressionImg2 from "@/public/systemsData/compression/compression2.jpeg"
+// Simulation
+import simulationImg1 from "@/public/systemsData/simulation/Fig1.png"
+import simulationImg2 from "@/public/systemsData/simulation/router-server_spq.png"
+import simulationImg3 from "@/public/systemsData/simulation/router-server_drr.png"
+
 
 
 export type ProjectType = {
@@ -91,7 +107,7 @@ export const experiencesData = [
     title: "Software Engineer, KloudDB",
     location: "San Francisco, CA",
     description:
-      "Software Engineer at KloudDB, a startup that is building Postgres Monitoring and Security Solutions.",
+      "Software Engineer Intern and then Engineer at KloudDB, a startup that is building Postgres Monitoring and Security Solutions.",
     icon: React.createElement(CgWorkAlt),
     date: "2024 - present",
   },
@@ -156,8 +172,7 @@ export const experiencesData = [
 export const MLProjectsData: ProjectType[] = [
   {
     title: "Golf Swing Analyzer",
-    description:
-      "Used Neural Networks, Computer Vision, and a custom KNN algorithm to detect and compare golf-swings.",
+    description: "Using Neural Networks, Computer Vision, and a custom KNN algorithm to detect and compare golf-swings",
     tags: ["Python", "PyTorch", "MediaPipe", "OpenCV", "Neural Networks", "KNN"],
     imageUrl: golfCV_snapshot,
     detailedDescription:
@@ -170,8 +185,7 @@ export const MLProjectsData: ProjectType[] = [
   },
   {
     title: "Auto-Integrate",
-    description:
-      "Integrate data from multiple sources and applications using custom built GPT-4 multi-agent framework. (Sponsored by ObjectEdge)",
+    description: "Integrate data from multiple sources and applications using custom built GPT-4 multi-agent framework",
     tags: ["Python", "GPT-4", "Autogen", "OpenAI", "Llama-2", "LLM"],
     imageUrl: autoIntegrate_snapshot,
     detailedDescription:
@@ -189,8 +203,7 @@ export const MLProjectsData: ProjectType[] = [
   ,
   {
     title: "Federated Machine Learning",
-    description:
-      "Machine learning model that trains on data from multiple sources without sharing the data.",
+    description: "Machine learning model that trains on data from multiple sources without sharing the data",
     tags: ["Python", "Rust", "Machine Learning", "Distributed Systems", "Protobuf"],
     imageUrl: fedML_snapshot,
     detailedDescription:
@@ -205,8 +218,7 @@ export const MLProjectsData: ProjectType[] = [
 export const bigDataProjectsData: ProjectType[] = [
   {
     title: "Geospatial Tracking and Resource Allocation",
-    description:
-      "Geospatial tracking of drones and resource allocation of charging using different policies.",
+    description: "Geospatial tracking of drones and resource allocation of charging using different policies",
     tags: ["Go", "Protobuf", "Distributed Systems", "Machine Learning"],
     imageUrl: drone_snapshot,
     detailedDescription:
@@ -224,8 +236,7 @@ export const bigDataProjectsData: ProjectType[] = [
 export const cloudProjectsData: ProjectType[] = [
   {
     title: "Auto-Cloud Deployer",
-    description:
-      "Automating the deployment of application to cloud service providers.",
+    description: "Automating the deployment of application to cloud service providers",
     tags: ["TypeScript", "Docker", "Google GCP", "Microsoft Azure"],
     imageUrl: autoCloud_snapshot,
     detailedDescription:
@@ -242,8 +253,7 @@ export const cloudProjectsData: ProjectType[] = [
 export const fullStackProjectsData: ProjectType[] = [
   {
     title: "Portfolio",
-    description:
-      "This website!",
+    description: "This website!",
     tags: ["React", "Next.JS", "Tailwind CSS", "TypeScript", "Framer Motion"],
     imageUrl: portfolio_snapshot,
     detailedDescription:
@@ -268,18 +278,46 @@ export const fullStackProjectsData: ProjectType[] = [
   }
 ]
 
-export const skillsData = [
-  "Python",
-  "Go",
-  "Java",
-  "C/C++",
-  "TypeScript",
-  "JavaScript",
-  "PostgreSQL",
-  "MySQL",
-  "Risc-V",
-  "Assembly",
-  
+export const systemsProjectsData: ProjectType[] = [
+  {
+    title: "RISC-V Pipeline Processor",
+    description: "A 5 stage pipeline processor with a Hazard Unit",
+    tags: ["Digital Design", "RISC-V", "Assembly"],
+    imageUrl: processor_snapshot,
+    detailedDescription:
+      "A 5-stage pipelined RISC-V processor with a Hazard Unit and additional data paths to support register forwarding for data dependencies, stalling for memory reads, and flushing the pipeline for branch handling.\n\n\
+      A project that started from learning how to build Half and Full Adders, SR Latches, D Flip-Flops to Registers, Decoders, and a single-stage processor. The single stage processor was then improved upon with a hazard unit to handle multiple stages and pipelining.",
+    additionalImages: [processorImg1.src, processorImg2.src],
+    videoUrl: "./systemsData/processor/processor_demo.mp4"
+  },
+  {
+    title: "Network Compression Detection",
+    description:
+      "Detect if compression is present on a network path",
+    tags: ["C", "TCP/IP", "UDP", "Sockets", "Networks"],
+    imageUrl: compression_snapshot,
+    detailedDescription:
+      "Detecting the presence of network compression in cooperative and non-cooperative networks.\n\n\
+      For a cooperative network, the presence of compression is detected by comparing the time taken for low-entropy and high-entropy data to be transmitted. A UDP packet train, bookended by TCP packets is used.\n\n\
+      For a non-cooperative network, the presence of compression is detected by comparing the time taken for an RST packet to be transmitted. I implemented the standalone application using Raw Sockets.",
+    additionalImages: [compressionImg1.src, compressionImg2.src],
+    githubUrl: "https://github.com/aditya17varma/Network-Compression-Detection"
+  },
+  {
+    title: "Network Simulation & Differentiated Services",
+    description: "Implementing differentiated services on a simulated network to control traffic flow",
+    tags: ["C/C++", "NS-3", "TCP/IP", "UDP", "Sockets", "Networks"],
+    imageUrl: simulation_snapshot,
+    detailedDescription:
+      "Simulated a network of 3 nodes using NS-3.\n\n\
+      The middle node implements a Quality of Service (QoS) policy, to manage network traffic flow.\n\n\
+      I implemented Strict Priority Queue (SPQ) and Deficit Round Robin (DRR) algorithms as QoS.\n\n\
+      Strict Priority Queue has queues with different priorities; packets get enqueued in the appropriate queue depending on chosen characteristics. Queues are dequed in order of priority. Lower queue only dequed if higher priority queues are empty.\n\n\
+      Deficit Round Robin attempts to be more fair than SPQ and allowing low priority queues to intermittently send packets.\n\n\
+      See the pdf in the repo for implementation details!",
+    additionalImages: [simulationImg1.src, simulationImg2.src, simulationImg3.src],
+    githubUrl: "https://github.com/aditya17varma/Network-Simulation-Differentiated-Services/tree/master"
+  }
 
 ] as const;
 
@@ -294,6 +332,7 @@ export const skillsLanguages = [
   "MySQL",
   "Risc-V",
   "Assembly",
+  "Linux",
   "Git",
 ] as const;
 
@@ -308,16 +347,17 @@ export const skillsTools = [
   "CSS",
   "Digital Design",
   "Scikit Learn", 
+  "Docker",
   "PyTorch", 
   "TensorFlow", 
   "XGBoost", 
+  "Protobuf",
+  "OpenCV", 
   "Spark", 
   "Hadoop", 
-  "Protobuf",
   "Mediapipe", 
-  "OpenCV", 
-  "Docker",
-  "Agile Development",
   "Google GCP", 
   "Microsoft Azure",
+  "Agile Development",
+  "Linux Kernel",
 ] as const;

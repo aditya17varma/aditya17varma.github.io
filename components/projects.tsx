@@ -2,7 +2,7 @@
 
 import React from 'react'
 import SectionHeading from './section-heading'
-import { MLProjectsData, bigDataProjectsData, cloudProjectsData, fullStackProjectsData } from '@/lib/data'
+import { MLProjectsData, bigDataProjectsData, cloudProjectsData, fullStackProjectsData, systemsProjectsData } from '@/lib/data'
 import ProjectSection from './project-section';
 import { useSectionInView } from '@/lib/hooks';
 
@@ -21,6 +21,7 @@ export default function Projects() {
         <ProjectSection title="Distributed Systems" projects={bigDataProjectsData} />
         <ProjectSection title="Full Stack" projects={fullStackProjectsData} />
         <ProjectSection title="Cloud Computing" projects={cloudProjectsData} />
+        <ProjectSection title="Systems and Networks" projects={systemsProjectsData} />
     </section>
   )
 }
