@@ -191,7 +191,7 @@ export const MLProjectsData: ProjectType[] = [
     title: "Federated Machine Learning",
     description:
       "Machine learning model that trains on data from multiple sources without sharing the data.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+    tags: ["Python", "Rust", "Machine Learning", "Distributed Systems", "Protobuf"],
     imageUrl: fedML_snapshot,
     detailedDescription:
       "This is a Federated Machine Learning system that uses a Central Coordinator and has learner nodes which are Mutex/Blocking.\n\n\
@@ -207,7 +207,7 @@ export const bigDataProjectsData: ProjectType[] = [
     title: "Geospatial Tracking and Resource Allocation",
     description:
       "Geospatial tracking of drones and resource allocation of charging using different policies.",
-    tags: ["Go", "Protobuf", "Distributed Systems", "ML"],
+    tags: ["Go", "Protobuf", "Distributed Systems", "Machine Learning"],
     imageUrl: drone_snapshot,
     detailedDescription:
       "I investigated the use of geospatial tracking using distributed systems concepts to track drones.\n\n\
@@ -226,7 +226,7 @@ export const cloudProjectsData: ProjectType[] = [
     title: "Auto-Cloud Deployer",
     description:
       "Automating the deployment of application to cloud service providers.",
-    tags: ["Go", "Protobuf", "Distributed Systems", "ML"],
+    tags: ["TypeScript", "Docker", "Google GCP", "Microsoft Azure"],
     imageUrl: autoCloud_snapshot,
     detailedDescription:
       "A tool to automate deploying applications to cloud service providers, support for AWS EB2, Google Cloud Run GCP, Azure Container Instances.\n\n\
@@ -244,7 +244,7 @@ export const fullStackProjectsData: ProjectType[] = [
     title: "Portfolio",
     description:
       "This website!",
-    tags: ["React", "NextJS", "Tailwind CSS", "TypeScript", "Framer Motion"],
+    tags: ["React", "Next.JS", "Tailwind CSS", "TypeScript", "Framer Motion"],
     imageUrl: portfolio_snapshot,
     detailedDescription:
     "A portfolio webiste to showcase my projects, skills, and a brief introduction about myself. This replaced an earlier portfolio website I built using base HTML and CSS. Building with React and Tailwind helped me make a more complex site but also increase consistency across it.\n\n\
