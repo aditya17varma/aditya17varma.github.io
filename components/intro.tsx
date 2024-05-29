@@ -33,7 +33,7 @@ export default function Intro() {
                 }}
                 >
                     <Image
-                    src="/AdiGradProfile.jpg"
+                    src="./AdiGradProfile.jpg"
                     alt="Adi portrait"
                     width="192"
                     height="192"
