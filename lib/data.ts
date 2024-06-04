@@ -139,7 +139,7 @@ export const experiencesData = [
     title: "Tech Lawyer",
     location: "Mandala Law Offices, India",
     description:
-      "Focussed on disruptive technologies and there interact with the law. In particular, advised on IT, data privacy, and e-commerce matters, and crafting corporate and commercial documentation.",
+      "Focussed on disruptive technologies and their interactions with the law. In particular, advised on IT, data privacy, and e-commerce matters, and crafting corporate and commercial documentation.",
     icon: React.createElement(CgWorkAlt),
     date: "2021-2024",
   },
