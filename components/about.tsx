@@ -25,7 +25,7 @@ export default function About() {
         </p>
         <p className='mb-3'>
             My educational journey has been diverse, including a <strong>Bachelor of Laws</strong> from O.P. Jindal Global University, and a Bachelor of Arts in History from the University of California, Los Angeles. 
-            Prior work experience includes working as a corporate lawyer in New Delhi, India, and as a legal assistant in Los Angeles, CA.
+            Prior work experience includes working as a lawyer in New Delhi, India, and as a legal assistant in Los Angeles, CA.
         </p>
             <strong>Relevant coursework</strong> includes: Machine Learning, Intro to AI, Algorithms, Full-Stack Development, Network Programming, Modern Parallel Programming, and Human-Computer Interaction.
         <p className='mb-3'>

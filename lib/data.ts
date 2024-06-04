@@ -136,11 +136,11 @@ export const experiencesData = [
     date: "2022",
   },
   {
-    title: "Associate",
+    title: "Tech Lawyer",
     location: "Mandala Law Offices, India",
     description:
-      "First year associate at Mandala Law Offices, a boutique law firm in India, specializing in corporate law.",
-    icon: React.createElement(LuGraduationCap),
+      "Focussed on disruptive technologies and there interact with the law. In particular, advised on IT, data privacy, and e-commerce matters, and crafting corporate and commercial documentation.",
+    icon: React.createElement(CgWorkAlt),
     date: "2021-2024",
   },
   {
@@ -156,7 +156,7 @@ export const experiencesData = [
     location: "Law Offices of Jonathan Ricasa, Los Angeles",
     description:
       "I helped with legal research, and drafting for a boutique law practice specializing in Class Action and Collective Action lawsuits.",
-    icon: React.createElement(LuGraduationCap),
+    icon: React.createElement(CgWorkAlt),
     date: "2016-2017",
   },
   {
